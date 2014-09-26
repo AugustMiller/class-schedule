@@ -1,0 +1,113 @@
+/*
+  Mixins
+*/
+
+@mixin round( $radius: 2px ) {
+  @include border-radius( $radius );
+}
+
+@mixin animate( $duration: .3s , $property: all , $function: cubic-bezier( 0 , 1 , 1 , 1 ) ) {
+  @include transition-duration( $duration );
+  @include transition-property( $property );
+  @include transition-timing-function( $function );
+}
+
+@mixin clearfix ( ) {
+  &:after {
+  display: table;
+  content: '';
+  clear: both;
+  }
+}
+
+// Screen Sizes
+
+@mixin wide ( ) {
+  @media screen and ( min-width : $breakpoint-desktop ) {
+  @content;
+  }
+}
+
+@mixin desktop ( ) {
+  @media screen and ( min-width : $breakpoint-tablet ) {
+  @content;
+  }
+}
+
+@mixin tablet ( ) {
+  @media screen and ( max-width : $breakpoint-tablet ) {
+  @content;
+  }
+}
+
+@mixin mobile ( ) {
+  @media screen and ( max-width : $breakpoint-mobile ) {
+  @content;
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  0% {
+  -webkit-transform: rotate(0deg);
+  }
+  50% {
+  -webkit-transform: rotate(-180deg);
+  }
+  100% {
+  -webkit-transform: rotate(0deg);
+  }
+}
+
+// Appearance
+
+@mixin divider ($side, $padding: false) {
+  border-#{$side}: 1px solid $c-grey-mid;
+  padding-top: $section-spacing;
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+         only screen and (   min--moz-device-pixel-ratio: 2),
+         only screen and (     -o-min-device-pixel-ratio: 2/1),
+         only screen and (        min-device-pixel-ratio: 2),
+         only screen and (                min-resolution: 192dpi),
+         only screen and (                min-resolution: 2dppx) { 
+      
+    @content;
+
+  }
+}
+
+// Animation
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation:    $animations;
+  -o-animation:      $animations;
+  animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}

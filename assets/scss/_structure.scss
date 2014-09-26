@@ -1,0 +1,16 @@
+/*
+  Structure, Grid-Independent
+*/
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: $max-width;
+}
+
+section {
+  padding: 0 0 $section-spacing 0;
+  &:first-of-type {
+    padding-top: $section-spacing;
+  }
+}

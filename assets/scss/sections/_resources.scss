@@ -1,0 +1,32 @@
+/*
+  Resources
+*/
+
+section.resources {
+  // @include divider(top);
+
+  .resource {
+
+    & + .resource {
+      margin-top: $section-spacing;
+    }
+  }
+}
+
+section.files-intro {
+  @include divider(top);
+}
+
+section.files {
+  // @include divider(top);
+  .file {
+    .file-type {
+      color: $c-grey-mid;
+      font-weight: 200;
+      font-size: 65%;
+      letter-spacing: 0.05em;
+      margin-left: 0.5em;
+      vertical-align: bottom;
+    }
+  }
+}

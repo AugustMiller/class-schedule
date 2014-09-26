@@ -1,0 +1,14 @@
+/*
+  Site Sections
+*/
+
+@import 'sections/weeks';
+@import 'sections/resources';
+
+section.header {
+
+}
+
+section.footer {
+  @include divider(top);
+}

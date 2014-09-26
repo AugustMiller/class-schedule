@@ -1,0 +1,76 @@
+/*
+  Typography
+*/
+
+body {
+  font-family: $family-sans;
+  line-height: 1.4em;
+}
+
+#{headers(all)} {
+  font-weight: 800;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+
+}
+
+h5 {
+  font-weight: normal;
+  &:before {
+
+  }
+}
+
+p {
+  margin-bottom: 1em;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  margin-bottom: 1em;
+
+  li {
+    padding-left: 1em;
+    position: relative;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      color: $c-grey-mid;
+      position: absolute;
+      left: 0;
+      top: -0.08em;
+      content: '-';
+    }
+  }
+}
+
+.small-caps {
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+code {
+  font-family: monospace;
+  font-size: 1.1em;
+}
