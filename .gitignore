@@ -2,3 +2,5 @@
 content/
 assets/css/
 deploy.sh
+.htaccess
+site/config/config.php
