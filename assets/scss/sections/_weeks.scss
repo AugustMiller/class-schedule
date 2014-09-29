@@ -27,6 +27,7 @@
       .date-weekday {
         a {
           &:before {
+            font-weight: normal;
             content: counter(days)
           }
         }
