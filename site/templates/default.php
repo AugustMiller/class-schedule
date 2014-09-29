@@ -1,5 +1,4 @@
 <?php snippet('header') ?>
-<?php snippet('menu') ?>
 
 <section class="content">
 
