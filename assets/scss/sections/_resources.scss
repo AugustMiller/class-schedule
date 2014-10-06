@@ -20,6 +20,8 @@ section.files-intro {
 section.files {
   // @include divider(top);
   .file {
+    margin-bottom: 1em;
+    
     .file-type {
       color: $c-grey-mid;
       font-weight: 200;

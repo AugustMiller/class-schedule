@@ -55,7 +55,7 @@
     <div class="wrapper files">
       <? foreach ( $page->documents() as $file ) { ?>
 
-          <div class="column col-4 file">
+          <div class="column col-4 tablet-half mobile-full file">
             <h4>
               <a href="<?= $file->url() ?>" title="<?= $file->name() ?>" download><?= $file->title() ?></a>
               <span class="file-type"><?= strtoupper( $file->extension() ) ?></span>
