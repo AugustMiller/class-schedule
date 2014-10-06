@@ -31,3 +31,8 @@ function isPast ( $time ) {
 function isFuture ( $time ) {
     return ( strtotime($time) > time() );
 }
+
+# Body Template Classes
+function bodyClass ( $page ) {
+  return $page->template();
+}

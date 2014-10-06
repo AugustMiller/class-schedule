@@ -12,7 +12,7 @@
 
   </head>
 
-  <body>
+  <body class="<?= bodyClass($page) ?>">
 
     <section class="header">
       <div class="wrapper">
