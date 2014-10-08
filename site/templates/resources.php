@@ -35,7 +35,7 @@
 
 </section>
 
-<? if ( $page->hasDocuments() ) { ?>
+<? if ( $page->hasFiles() ) { ?>
 
   <section class="files-intro">
 
