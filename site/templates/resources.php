@@ -53,7 +53,8 @@
   <section class="files">
 
     <div class="wrapper files">
-      <? foreach ( $page->documents() as $file ) { ?>
+      <? $files = $page->files()->filterBy( 'extension', '!=', 'txt'); ?>
+      <? foreach ( $files as $file ) { ?>
 
           <div class="column col-4 tablet-half mobile-full file">
             <h4>
