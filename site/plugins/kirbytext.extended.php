@@ -32,7 +32,7 @@ class kirbytextExtended extends kirbytext {
     if ( is_object( $page = $site->pages()->find($options['page']) ) && is_object($file = $page->files()->find($options['resource']) ) ) {
  
       # If we're good to go, return (not print) the HTML for a link.
-      return '<a class="file" href="' . $file->url() . '">' . html($options['text']) . '</a>';
+      return '<a class="file" href="' . $file->url() . '" download>' . html($options['text']) . '</a>';
     } else {
       # Otherwise, output just the text that was provided in the short-tag
       return $options['text'];
