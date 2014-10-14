@@ -7,6 +7,7 @@
     <meta name="description" content="<?= html($site->description()) ?>" />
     <meta name="keywords" content="<?= html($site->keywords()) ?>" />
     <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, user-scaleable=no, initial-scale=1, maximum-scale=1" />
 
     <?= css('assets/css/schedule.css') ?>
 
