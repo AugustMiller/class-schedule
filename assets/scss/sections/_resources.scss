@@ -32,4 +32,11 @@ section.files {
       vertical-align: bottom;
     }
   }
+  a {
+    &[download] {
+      &:before {
+        content: '\21af';
+      }
+    }
+  }
 }
