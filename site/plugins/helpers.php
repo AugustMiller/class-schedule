@@ -34,5 +34,8 @@ function isFuture ( $time ) {
 
 # Body Template Classes
 function bodyClass ( $page ) {
-  return $page->template();
+  $classes = array($page->template());
+  if ( $page->has_children() ) array_push($classes, 'has-children');
+
+  return join($classes, ' ');
 }
