@@ -13,7 +13,7 @@
 
 </section>
 
-<? foreach ( $page->children()->visible() as $week ) { ?>
+<? foreach ( $page->children()->visible()->flip() as $week ) { ?>
 
   <section class="week">
 
