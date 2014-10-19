@@ -21,15 +21,25 @@ function sluggify ( $str ) {
 
 # Date Comparisons
 function isToday ( $time )  {
-    return ( strtotime($time) === strtotime('today') );
+    return ( $time == strtotime('today') );
 }
 
 function isPast ( $time ) {
-    return ( strtotime($time) < time() );
+    return ( $time < strtotime('today') );
 }
 
 function isFuture ( $time ) {
-    return ( strtotime($time) > time() );
+    return ( $time > strtotime('today') );
+}
+
+function getDayClasses ( $time, $always = array('day') ) {
+  $day_classes = $always;
+
+  if ( isFuture( $time ) ) array_push($day_classes, 'future');
+  if ( isPast( $time ) ) array_push($day_classes, 'past');
+  if ( isToday( $time ) ) array_push($day_classes, 'today');
+
+  return implode(' ', $day_classes);
 }
 
 # Body Template Classes

@@ -34,10 +34,7 @@
 
         <? foreach ( $week->children() as $day ) { ?>
 
-          <? $day_classes = array('day') ?>
-          <? if ( isFuture($day->date()) ) array_push($day_classes, 'future') ?>
-
-          <div id="<?= sluggify($day->title()) ?>" class="wrapper <?= join(' ', $day_classes) ?>">
+          <div id="<?= sluggify($day->title()) ?>" class="wrapper <?= getDayClasses( $day->date() ); ?>">
 
             <div class="column col-2 tablet-full date">
               <? $date = $day->date() ?>
