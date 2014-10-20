@@ -46,7 +46,7 @@
               </h5>
             </div>
 
-            <div class="column col-6 tablet-two-thirds mobile-full day-content">
+            <div class="column col-5 tablet-two-thirds mobile-full day-content">
 
               <? if ( strlen( $day->agenda() ) ) { ?>
                 <div class="agenda">
@@ -56,7 +56,7 @@
 
             </div>
 
-            <div class="column col-3 tablet-third mobile-full">
+            <div class="column col-4 push-1 tablet-third mobile-full">
 
               <div class="checklist">
                 <h4>Checklist</h4>
