@@ -13,4 +13,7 @@ section {
   &:first-of-type {
     padding-top: $section-spacing;
   }
+  & + section {
+    // @include divider(top);
+  }
 }

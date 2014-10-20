@@ -6,7 +6,7 @@ class kirbytextExtended extends kirbytext {
     
     parent::__construct($text, $markdown);
     
-    # A "Resource" as we're calling it needs a filename, scope and link text:
+    # A "Resource" as we're calling it needs a filename, a page to fetch the resource from, and link text:
     $this->addTags('resource');
     $this->addAttributes('page');
     $this->addAttributes('text');
