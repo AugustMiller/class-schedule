@@ -20,7 +20,7 @@
     <div class="wrapper files">
       <? $documents = $page->children(); ?>
       <? foreach ( $documents as $document ) { ?>
-        <? $file = $document->files()->first() ?>
+        <? $file = $document->files()->filterBy('extension', '!=', 'txt')->first() ?>
         <div class="column col-4 tablet-half mobile-full file">
           <h4>
             <a href="<?= $file->url() ?>" title="<?= $document->name() ?>" download><?= $document->title() ?></a>
