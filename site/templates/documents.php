@@ -23,7 +23,7 @@
         <? $file = $document->files()->first() ?>
         <div class="column col-4 tablet-half mobile-full file">
           <h4>
-            <a href="<?= $document->url() ?>" title="<?= $document->name() ?>" download><?= $document->title() ?></a>
+            <a href="<?= $file->url() ?>" title="<?= $document->name() ?>" download><?= $document->title() ?></a>
             <span class="file-type"><?= strtoupper( $file->extension() ) ?></span>
           </h4>
           <?= kirbytext( $document->description() ) ?>
