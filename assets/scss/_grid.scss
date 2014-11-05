@@ -24,12 +24,16 @@
    padding-left: ( $gutter-width / 2 );
    min-height: 1em;
    position: relative;
-   float: left;
+   // float: left;
+   display: inline-block;
+   vertical-align: top;
+   font-size: 1rem;
    @include box-sizing( border-box );
    @include clearfix();
    @include mobile {
       clear: both;
       width: 100%;
+      margin-bottom: 1em;
       // padding-left: 0;
       // padding-right: 0;
    }
@@ -37,10 +41,6 @@
    &.static {
       position: static;
    }
-}
-
-.wrapper {
-   @include clearfix;
 }
 
 .column .column {

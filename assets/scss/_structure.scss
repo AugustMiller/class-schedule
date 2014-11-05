@@ -4,8 +4,10 @@
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 1.5%;
   max-width: $max-width;
+  font-size: 0rem;
+  @include clearfix;
 }
 
 section {
