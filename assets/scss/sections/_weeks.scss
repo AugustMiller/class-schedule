@@ -15,7 +15,7 @@
   }
 
   .day {
-    counter-increment: days;
+    // counter-increment: days;
 
     & + .day {
       margin-top: ( $section-spacing * 1.5 );
@@ -27,8 +27,9 @@
       .date-weekday {
         a {
           &:before {
-            font-weight: normal;
-            content: counter(days)
+            // font-weight: normal;
+            // content: counter(days)
+            content: '';
           }
         }
       }
