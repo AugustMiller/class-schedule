@@ -23,7 +23,7 @@ Snow.prototype = {
 
     window.setInterval( function ( ) {
       self.update();
-    }, 50);
+    }, ( 1000 / 25 ) );
 
     console.log(self);
   },
@@ -80,7 +80,7 @@ Flake = function (size, storm_strength, container) {
 
   self.options = {
     storm: container,
-    radius: Math.sqrt( Math.random() * size ),
+    radius: Math.ceil(Math.sqrt( Math.random() * size )),
     created: Date.now(),
     horizontal_start: ( Math.random() * $(window).width() ),
     vertical_start: ( Math.random() * $(window).height() ),
@@ -120,8 +120,7 @@ Flake.prototype = {
 
 
     self.el.css({
-      left: self.position.left,
-      top: self.position.top
+      transform: 'translate3d(' + self.position.left + 'px, ' + self.position.top + 'px, 0)'
     });
 
     return ( self.isVisible() ) ? true : false;
