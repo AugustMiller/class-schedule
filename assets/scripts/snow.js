@@ -8,7 +8,7 @@ Snow = function (density, intensity) {
     container: $('<div />').attr({'id': 'snow'}).appendTo(document.body),
     count: density,
     intensity: intensity,
-    radius: 15
+    radius: 25
   };
 
   self.init();
