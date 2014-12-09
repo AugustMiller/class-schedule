@@ -21,7 +21,7 @@ Snow.prototype = {
 
     self.spawn(self.options.count);
 
-    window.setInterval( function ( ) {
+    self.options.timer = window.setInterval( function ( ) {
       self.update();
     }, ( 1000 / 25 ) );
 
@@ -42,34 +42,37 @@ Snow.prototype = {
     // console.log("Updating");
 
     for ( var s = 0; s < self.flakes.length; s++ ) {
-      if ( ! self.flakes[s].move() ) self.despawn(s);
+      if ( ! self.flakes[s].move() ) self.destroy(s, true);
     }
   },
 
   implode: function () {
     var self = this;
 
-    for ( var s = 0; s < self.flakes.length; s++ ) {
-      self.despawn(s);
+    window.clearInterval(self.options.timer);
+
+    for ( var s = 0; s < self.options.count; s++ ) {
+      self.destroy(0, false);
     }
   },
 
-  despawn: function (flake) {
+  destroy: function (flake, replace) {
     var self = this,
-        destroy = ( flake !== 'undefined' ) ? flake : ( Math.random() * self.flakes.length );
+        to_melt = ( flake !== 'undefined' ) ? flake : Math.random( Math.random() * self.flakes.length );
 
-    // console.log("Removing " + destroy);
+    console.log("Melting " + to_melt);
 
     // Clean up the Flake
-    self.flakes[destroy].poof();
+    self.flakes[to_melt].poof();
 
     // Delete the array element
-    delete self.flakes[destroy];
+    delete self.flakes[to_melt];
 
     // Then close the gap.
-    self.flakes.splice(destroy, 1);
+    self.flakes.splice(to_melt, 1);
 
-    self.spawn(1);
+    // Should we replace it with another?
+    if ( replace ) self.spawn(1);
   }
 
 };
@@ -123,7 +126,7 @@ Flake.prototype = {
       transform: 'translate3d(' + self.position.left + 'px, ' + self.position.top + 'px, 0)'
     });
 
-    return ( self.isVisible() ) ? true : false;
+    return self.isVisible();
   },
 
   isVisible: function () {
