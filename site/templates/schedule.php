@@ -32,7 +32,7 @@
 
       <? if ( $week->children()->count() ) { ?>
 
-        <? foreach ( $week->children() as $day ) { ?>
+        <? foreach ( $week->children()->flip() as $day ) { ?>
 
           <div id="<?= sluggify($day->title()) ?>" class="wrapper <?= getDayClasses( $day->date() ); ?>">
 
