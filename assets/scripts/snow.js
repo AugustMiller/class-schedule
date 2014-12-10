@@ -118,7 +118,7 @@ Flake.prototype = {
 
     self.position = {
       left: self.position.left + Math.sin( ( ( now - self.options.created ) / self.options.multiplier ) ),
-      top: self.options.vertical_start + ( ( now - self.options.created ) ) / 50
+      top: self.options.vertical_start + ( ( now - self.options.created ) ) * ( self.options.radius / 100 )
     };
 
 
