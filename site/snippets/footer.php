@@ -5,10 +5,6 @@
       </div>
     </div>
   </section>
-  <? if ( true ) { ?>
-    <?= js('assets/scripts/snow.js') ?>
-    <?= css('assets/css/snow.css') ?>
-  <? } ?>
 </body>
 
 </html>
