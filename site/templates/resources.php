@@ -24,7 +24,7 @@
         </h4>
       </div>
       <div class="column col-6 tablet-three-quarters mobile-full description">
-        <?= kirbytext($resource->description()) ?>
+        <?= $resource->description()->kirbytext() ?>
       </div>
       <div class="column col-3 metadata">
         <?#= "Hello" ?>
