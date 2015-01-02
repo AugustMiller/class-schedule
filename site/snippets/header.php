@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, user-scaleable=no, initial-scale=1, maximum-scale=1" />
 
-    <?= js('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js') ?>
+    <?#= js('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js') ?>
     <?= css('assets/css/schedule.css') ?>
 
   </head>
