@@ -45,7 +45,7 @@ function getDayClasses ( $time, $always = array('day') ) {
 # Body Template Classes
 function bodyClass ( $page ) {
   $classes = array($page->template());
-  if ( $page->has_children() ) array_push($classes, 'has-children');
+  if ( $page->hasChildren() ) array_push($classes, 'has-children');
 
   return join($classes, ' ');
 }
