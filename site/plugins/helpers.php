@@ -21,15 +21,15 @@ function sluggify ( $str ) {
 
 # Date Comparisons
 function isToday ( $time )  {
-    return ( $time == strtotime('today') );
+  return ( $time == strtotime('today') );
 }
 
 function isPast ( $time ) {
-    return ( $time < strtotime('today') );
+  return ( $time < strtotime('today') );
 }
 
 function isFuture ( $time ) {
-    return ( $time > strtotime('today') );
+  return ( $time > strtotime('today') );
 }
 
 function getDayClasses ( $time, $always = array('day') ) {
