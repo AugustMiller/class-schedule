@@ -61,3 +61,21 @@ a {
 .text-left {
   text-align: left;
 }
+
+// Tables
+
+table {
+  margin-bottom: 1em;
+
+  tr {
+
+  }
+
+  th {
+    font-style: italic;
+  }
+
+  td {
+    padding: 0 1em 0 0;
+  }
+}

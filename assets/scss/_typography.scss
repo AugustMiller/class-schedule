@@ -30,9 +30,7 @@ h4 {
 
 h5 {
   font-weight: normal;
-  &:before {
-
-  }
+  font-style: italic;
 }
 
 p {
@@ -72,6 +70,10 @@ ul {
 
 em {
   font-style: italic;
+}
+
+strong {
+  font-weight: bold;
 }
 
 code {
