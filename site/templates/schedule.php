@@ -30,9 +30,9 @@
 
     <div class="week-days">
 
-      <? if ( $week->children()->count() ) { ?>
+      <? if ( $week->children()->visible()->count() ) { ?>
 
-        <? foreach ( $week->children()->flip() as $day ) { ?>
+        <? foreach ( $week->children()->visible()->flip() as $day ) { ?>
 
           <div id="<?= sluggify($day->title()) ?>" class="wrapper <?= getDayClasses( $day->date() ); ?>">
 
