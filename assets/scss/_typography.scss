@@ -41,7 +41,7 @@ p {
   }
 }
 
-ul {
+ul, ol {
   margin-bottom: 1em;
 
   li {
@@ -60,6 +60,21 @@ ul {
       content: '-';
     }
   }
+
+  p + & {
+    margin-top: 1em;
+  }
+}
+
+ol {
+  counter-reset: list;
+  li {
+    counter-increment: list;
+    padding-left: 1.5em;
+    &:before {
+      content: counter(list)
+    }
+  }
 }
 
 .small-caps {
@@ -76,11 +91,15 @@ strong {
   font-weight: bold;
 }
 
-code {
+p code, pre {
   font-family: monospace;
   font-size: 1.1em;
   padding: 0.1em 0.35em;
   background: white;
   border: 1px solid rgb(228, 228, 228);
   border-radius: 3px;
+}
+
+pre {
+  margin: 1em 0;
 }
