@@ -15,7 +15,7 @@
 
 <section class="resources">
 
-  <? foreach ( $page->children() as $resource ) { ?>
+  <? foreach ( $page->children()->sortBy('title', 'ASC') as $resource ) { ?>
 
     <div class="wrapper resource">
       <div class="column col-2 tablet-quarter mobile-full resource-name">
