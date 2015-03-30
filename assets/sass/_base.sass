@@ -1,0 +1,61 @@
+*
+  outline: none
+  box-sizing: border-box
+
+html,
+body
+
+body
+  background: $c-grey-light
+  color: $c-grey-charcoal
+  counter-reset: days
+
+// Links
+
+a
+  text-decoration: none
+  color: inherit
+  border-bottom: 1px solid $c-grey-mid
+
+  &:hover
+    border-bottom: 1px solid $c-grey-charcoal
+    // color: $c-grey-dark
+
+  &[href^="#"], &[download]
+    position: relative
+
+    &:before
+      content: ''
+      position: absolute
+      color: $c-grey-mid
+      left: -0.85em
+
+  &[href^="#"]
+    &:before
+      content: '#'
+
+// Color Helpers
+
+.fade
+  color: $c-grey-mid
+
+// Alignment
+
+.text-right
+  text-align: right
+
+.text-left
+  text-align: left
+
+// Tables
+
+table
+  margin-bottom: 1em
+
+  tr
+
+  th
+    font-style: italic
+
+  td
+    padding: 0 1em 0 0

@@ -1,0 +1,30 @@
+@mixin clearfix
+  &:after
+    display: table
+    content: ''
+    clear: both
+
+
+// Screen Sizes
+
+@mixin wide
+  @media screen and ( min-width : $breakpoint-desktop )
+    @content
+
+@mixin desktop
+  @media screen and ( min-width : $breakpoint-tablet )
+    @content
+
+@mixin tablet
+  @media screen and ( max-width : $breakpoint-tablet )
+    @content
+
+@mixin mobile
+  @media screen and ( max-width : $breakpoint-mobile )
+    @content
+
+// Appearance
+
+@mixin divider ($side, $padding: false)
+  border-#{$side}: 1px solid $c-grey-mid
+  padding-top: $section-spacing
