@@ -4,7 +4,7 @@
 
   <div class="wrapper">
     <div class="column col-8 tablet-full">
-      <h2>Schedule</h2>
+      <h2><?= $page->title() ?></h2>
       <div class="introduction">
         <?= kirbytext($page->text()) ?>
       </div>
