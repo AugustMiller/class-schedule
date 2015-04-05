@@ -5,3 +5,4 @@ deploy.sh
 .htaccess
 site/config/config.php
 site/cache/
+site/config/config.php
